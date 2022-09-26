@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BookShelfKu</title>
+  <link rel="stylesheet" href="src/css/style.css">
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/a53653dcab.js" crossorigin="anonymous"></script>
+  <!-- Sweet Alert -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.20/dist/sweetalert2.all.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <h1>Book<span>Shelf<span></h1>
+      <p>
+        Dengan Bookshelf kamu bisa mengelola daftar buku yang sedang kamu baca!!! Sangat mudah dan gampang dipakai!!
+      </p>
+      <a href="#manage-books">Kelola Buku</a>
+    </div>
+  </header>
+
+  <main id="manage-books">
+    <section class="add-book">
+      <div class="add-book-header">
+        <h2>Add Buku</h2>
+        <p>
+          Kamu tambahin aja buku yang sesuai dengan kondisi kamu baca.
+        </p>
+      </div>
+      <div class="add-book-content">
+        <form action="" method="post" id="addForm">
+          <div class="form-element">
+            <label for="judul-buku">Judul Buku</label>
+            <input type="text" id="judul-buku" name="judul-buku"
+              placeholder="contoh ygy: Laskar Pelangi" maxlength="50" required>
+          </div>
+          <div class="form-element">
+            <label for="penulis">Penulis</label>
+            <input type="text" id="penulis" name="penulis" placeholder="contoh: andreas hirata" maxlength="100" required>
+          </div>
+          <div class="form-element">
+            <label for="tahun-terbit">Tahun Terbit</label>
+            <input type="date" id="tahun-terbit" name="tahun-terbit" required>
+          </div>
+          <div class="form-element">
+            <input type="checkbox" id="isComplete" name="isRead" checked>
+            <label for="isComplete">Sudah selesai dibaca</label>
+          </div>
+          <div class="form-element">
+            <button type="submit" id="add-to-shelf">Tambahin nih bukunya ke rak</button>
+          </div>
+        </form>
+        <div class="img-section">
+          <img src="./src/img/rodentia-icons_bookmark-add.svg" alt="add-books">
+        </div>
+      </div>
+    </section>
+
+    <section class="search-books">
+      <div class="search-container">
+        <input type="text" id="search-keyword" placeholder="Cari buku berdasarkan judulnya...">
+        <button type="submit" id="search-keyword-button">
+          <img src="src/img/search.svg" alt="Search">
+        </button>
+      </div>
+    </section>
+
+    <section class="uncompleted-books">
+      <div class="uncompleted-books-header" id="uncompleted-books-header">
+        <h2>Daftar Buku <br> Belum Selesai Dibaca</h2>
+      </div>
+      <div class="uncompleted-books-shelf">
+      </div>
+    </section>
+
+    <section class="completed-books">
+      <div class="completed-books-header" id="completed-books-header">
+        <h2>Daftar Buku <br> Telah Selesai Dibaca</h2>
+      </div>
+      <div class="completed-books-shelf">
+      </div>
+    </section>
+
+    <section class="update-book">
+      <div class="container">
+        <div class="update-book-header">
+          <h2>Perbarui Data Buku</h2>
+        </div>
+        <form action="" id="update-form" method="post">
+        </form>
+      </div>
+    </section>
+
+    <audio controls>
+      <source src="src/audio/BookNotif.mp3" type="audio/mpeg">
+    </audio>
+  </main>
+
+  <footer>
+    <p>Made by <a href="https://github.com/hazelradityam">Hazel Raditya M</a></p>
+    <p>DICODING SUBMISSION</p>
+  </footer>
+  <script src="src/js/script.js"></script>
+</body>
+
+</html>
